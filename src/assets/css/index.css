@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  }
+}
+
+@layer utilities {
+  .isActive {
+    position: relative;
+  }
+  .isActive::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 2px;
+    left: 10px;
+    height: 15px;
+    width: 60%;
+    border-bottom: 2px solid #000;
+  }
+}
